@@ -49,3 +49,21 @@ class ComissionedEmployee(Employee):
             explanatory_string += f" and receives a commission for {self.c_id} contract(s) at {self.cpc}/contract."
         explanatory_string += f"  Their total pay is {self.get_pay()}."
         return explanatory_string
+
+# Billie works on a monthly salary of 4000.  Their total pay is 4000.
+billie = Employee('Billie', m_money=4000)
+
+# Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
+charlie = Employee('Charlie', c_time=100, h_money=25)
+
+# Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800.
+renee = ComissionedEmployee('Renee', m_money=3000, c_id=4, cpc=200)
+
+# Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.  Their total pay is 4410.
+jan = ComissionedEmployee('Jan', c_time=150, h_money=25, c_id=3, cpc=220)
+
+# Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500.
+robbie = ComissionedEmployee('Robbie', m_money=2000, bonus=1500)
+
+# Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
+ariel = ComissionedEmployee('Ariel', c_time=120, h_money=30, bonus=600)
